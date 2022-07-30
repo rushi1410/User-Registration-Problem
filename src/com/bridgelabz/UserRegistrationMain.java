@@ -74,7 +74,7 @@ public class UserRegistrationMain {
 	public static void PasswordValidation(String password){
 
 		boolean isPassword;
-		String passwordRegex ="[a-z A-Z]{8,}$";
+		String passwordRegex ="^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
 		Pattern patternObj = Pattern.compile(passwordRegex);
 		if (password == null) {
 			isPassword = false;
